@@ -1,0 +1,107 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600,700|Source+Code+Pro:400,500,900&display=swap');
+
+body {
+  background-color: #FAFAFA;
+  padding: 50px;
+  height: 100vh;
+}
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: #212123;
+  text-align: left;
+  padding-left: 80px;
+}
+h1 .task-title {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 900;
+}
+li {
+  text-size: 50px;
+  text-weight: 700;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+blockquote {
+  position: relative;
+  display: inline-block;
+  background: #eee;
+  margin-top: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 70px 30px 0px 20px;
+  border-radius: 10px;
+  font-family: 'Source Code Pro', monospace;
+  color: #42516D;
+  text-align: left;
+
+  box-shadow: 1px 1px 1px #999,
+              2px 2px 1px #999,
+              3px 3px 1px #999;
+  transition-duration: .4s;
+
+  &:hover {
+    box-shadow: 1px 1px 5px #999,
+                2px 2px 6px #999,
+                3px 3px 7px #999;
+  }
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "⚡️";
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 50px;
+    color: #355C7D;
+  }
+}
+.field {
+  margin: 10px;
+}
+.emoji {
+  font-size: 40px;
+}
+.container {
+  width:40%;
+  text-align:center;
+}
+#left {
+  float:left;
+  background-color: yellow;
+  width:120px;
+  display: inline-block;
+  padding: 20px;
+}
+
+#center {
+  display: inline-block;
+  margin:0 auto;
+  width:150px;
+  background-color: yellow;
+  padding: 20px;
+}
+
+#right {
+  float:right;
+  width:120px;
+  background-color: yellow;
+  display: inline-block;
+  padding: 20px;
+}
+#details-p {
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+}
+#block-tasks {
+  text-align: left;
+  width:200px;
+  margin: 25px;
+  display: inline-block;
+}
