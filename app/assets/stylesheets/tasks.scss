@@ -1,21 +1,25 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600,700|Source+Code+Pro:400,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:600,700|Josefin+Slab|Source+Code+Pro:400,500,900&display=swap');
 
 body {
-  background-color: #FAFAFA;
+  // background-color: #4EB2F9;
   padding: 50px;
   height: 100vh;
+  background-image:url('https://media.giphy.com/media/xUOrwizmKFlodO7tEk/giphy.gif');
+  background-position: center;
+  background-size: cover;
 }
 h1 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Josefin Slab', serif;
   font-weight: 600;
   font-size: 100px;
   margin-bottom: 20px;
-  color: #212123;
-  text-align: left;
-  padding-left: 80px;
+  color: #FAFAFA;
+  text-align: right;
+  padding-left: 50px;
+  padding-right: 70px;
 }
 h1 .task-title {
   font-family: 'Source Code Pro', monospace;
@@ -30,14 +34,13 @@ li {
 blockquote {
   position: relative;
   display: inline-block;
-  background: #eee;
+  background-color: #212123;
   margin-top: 150px;
-  overflow: hidden;
+  opacity: 80%;
   white-space: nowrap;
-  padding: 70px 30px 0px 20px;
-  border-radius: 10px;
+  padding: 40px 30px 0px 20px;
   font-family: 'Source Code Pro', monospace;
-  color: #42516D;
+  color: #9870E1;
   text-align: left;
 
   box-shadow: 1px 1px 1px #999,
@@ -56,44 +59,77 @@ blockquote {
     position: absolute;
     top: 10px;
     left: 10px;
-    content: "⚡️";
+    content: "⚡️Todo";
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 50px;
-    color: #355C7D;
+    font-size: 25px;
+    color: #C7C7C7;
   }
 }
 .field {
   margin: 10px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1F213A;
+}
+.actions {
+  margin-top: -10px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
 }
 .emoji {
   font-size: 40px;
 }
 .container {
-  width:40%;
+  width:19%;
   text-align:center;
+  position: absolute;
+  top: 510px;
+  right: 600px;
+}
+.container2 {
+  width: 30%;
+  background-color: #42516D;
+  padding: 20px;
+  margin: 50px 250px;
 }
 #left {
-  float:left;
-  background-color: yellow;
-  width:120px;
   display: inline-block;
-  padding: 20px;
+  align-content: center;
+  background-color: #C06C84;
+  width:60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 90%;
 }
-
 #center {
   display: inline-block;
-  margin:0 auto;
-  width:150px;
-  background-color: yellow;
-  padding: 20px;
+  width:60px;
+  height: 60px;
+  background-color: #C06C84;
+  border-radius: 50%;
+  opacity: 90%;
 }
-
 #right {
-  float:right;
-  width:120px;
-  background-color: yellow;
   display: inline-block;
-  padding: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #C06C84;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 90%;
+}
+#left,
+#center,
+#right {
+  transition-duration: .5s;
+
+  &:hover {
+    background-color: black;
+  }
 }
 #details-p {
   text-align: center;
@@ -104,4 +140,27 @@ blockquote {
   width:200px;
   margin: 25px;
   display: inline-block;
+}
+#task-title {
+  color: #FAFAFA;
+}
+#add-task {
+  position: absolute;
+  bottom: 150px;
+  right: 150px;
+  width:70px;
+  height: 35px;
+  opacity: 90%;
+  border-radius: 5px;
+  background-color: #B3FCDD;
+  box-shadow: 1px 1px 1px #999,
+              2px 2px 1px #999,
+              3px 3px 1px #999;
+  transition-duration: .8s;
+
+  &:hover {
+    box-shadow: 1px 1px 5px #999,
+                2px 2px 6px #999,
+                3px 3px 7px #999;
+  }
 }
